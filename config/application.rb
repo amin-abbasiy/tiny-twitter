@@ -10,7 +10,8 @@ module SampleApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
-    # Amin: For 404 Instead Rails Error config.action_dispatch.rescue_responses.merge!('404' => :not_found)
+    # Amin: For 404 Instead Rails Error (Below Line)
+    config.action_dispatch.rescue_responses.merge!('404' => :not_found)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
