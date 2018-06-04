@@ -1,0 +1,26 @@
+<% provide(:title, 'Login') %>
+<% provide(:amin, 'Wellcome To Login Page') %>
+<div class="cn">
+<%= form_for(:session, url: login_path) do |f| %>
+<%= f.label :email %>
+<div class="whd">
+    <%= f.email_field :email, class: 'form-control' %>
+</div>
+<%= f.label :password %>
+    (<%= link_to 'PasswordReset', new_passwordreset_path, style: "color: #0055ff"  %>)
+<div class="whd">
+    <%= f.password_field :password, class: 'form-control' %>
+</div>
+<br/>
+<%= f.label :remember_me do %>
+<%= f.check_box :remember_me %>
+<span>Remember me on this computer</span>
+<% end %>
+<br/>
+<br/>
+<%= f.submit 'Login To Aminit Accont', class: 'btn btn-primary'%>
+<% end %>
+<br/>
+<span class="badge">Dont You Have Accont? Please</span> <%= link_to 'Signup', signup_path, class: 'btn btn-success' %>
+</div>
+<br/>

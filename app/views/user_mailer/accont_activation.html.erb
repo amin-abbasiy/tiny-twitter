@@ -1,0 +1,6 @@
+<h1>Aminit App</h1>
+
+<p>
+Wellcome To Aminit Accont, Please Active Your Accont By Click Below Link :
+</p>
+[<%= link_to 'Activate', edit_accont_activation_url(@user.activation_token, email: @user.email) %>]

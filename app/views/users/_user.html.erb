@@ -1,0 +1,9 @@
+<pre class="prec">
+<%= gravatar_for(user, options = {size: 50}) %>
+<%= "ID : #{id = user.id} " %>
+<%= "Name : #{user.name} " %>
+<% if current_user.admin? && !current_user?(user) then %>
+<%="  Email :  #{user.email}" %>
+<%= link_to 'Delete', user, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are Youn Sure!'} %>
+<% end %>
+</pre>

@@ -1,0 +1,5 @@
+Hi Dear <% @user.name %>
+
+Wellcome To Aminit Accont, Please Active Your Accont By Click Below Link : 
+
+[<%= edit_accont_activation_url(@user.activation_token, email: @user.email)%>]

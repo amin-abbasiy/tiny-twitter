@@ -1,0 +1,26 @@
+<li id="micropost-1">
+  <% if @user then %>  
+	<% @user.microposts.each do |micropost| %>
+	<span><%= link_to gravatar_for(micropost.user ,size: 50), micropost.user %></span>
+
+	<span class="user" style="color: blue"><%= link_to micropost.user.name, micropost.user %></span>
+	<span>
+		<%= image_tag micropost.picture.url if micropost.picture? %>
+	</span>
+    <br/>
+	<span class="content" ><%= micropost.content %></span>
+
+	Posted: <span class="timestamp" ><%= time_ago_in_words(micropost.created_at) %> Ago.</span>
+	<% if current_user.id.to_i == params[:id].to_i  || is_admin? then %>
+	<span><%= link_to :DeletePost, micro_post_path(micropost.id), method: :delete, data: {confirm: "Are You Sure?"}, class: 'btn btn-danger' %></span>
+	<% end %>
+<!-- micropost.id I Add This To method for Found Post Id
+ -->	
+ <br/>
+    <% end %>
+    <% end %>
+<br/>
+<br/>
+</li>
+<br/>
+<br/>

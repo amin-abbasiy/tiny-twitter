@@ -1,0 +1,31 @@
+<% provide(:title, "home") %>
+<% provide(:amin, "This Is Home Conetny")%>
+
+<% if logged_in? then %>
+  <div class="row">
+    <aside class="way2 col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="way col-md-8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+ <% else %>
+
+<%= image_tag 'خانه.jpg', alt: 'خانه امین' %>
+
+<p>In computer programming, homoiconicity (from the Greek words homo meaning the same and icon meaning representation) is a property of some programming languages in which the program structure is similar to its syntax, and therefore the program's internal representation can be inferred by reading the text's layout.[1] If a language is homoiconic, it means that the language text has the same structure as its abstract syntax tree (AST) (i.e. the AST and the syntax are isomorphic). This allows all code in the language to be accessed and transformed as data, using the same representation. This property is often summarized saying that the language treats "code as data".
+
+In a homoiconic language, the primary representation of programs is also a data structure in a primitive type of the language itself. This makes metaprogramming easier than in a language without this property, since code can be treated as data: reflection in the language (examining the program's entities at runtime) depends on a single, homogeneous structure, and it does not have to handle several different structures that would appear in a complex syntax. To put that another way, homoiconicity is where a program's source code is written as a basic data structure that the programming language knows how to access.
+
+A typical, commonly cited example is the programming language Lisp, which was created to be easy for lists manipulation and where the structure is given by S-expressions that take the form of nested lists. Lisp programs are written in the form of lists; the result is that the program can access its own functions and procedures while running, and programmatically reprogram itself on the fly. Homoiconic languages typically include full support of syntactic macros allowing the programmer to express program transformations in a concise way. Examples are the programming languages Clojure (a contemporary dialect of Lisp), Rebol (also its successor Red), Refal, and more recently Julia.</p>
+<% end %>

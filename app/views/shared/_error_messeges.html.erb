@@ -1,0 +1,11 @@
+<p class="error">
+<% if object.errors.any? then %>
+<center>
+<p class="alert alert-danger"><%= pluralize(object.errors.count, 'Error')%></p>
+<br/>
+<% object.errors.full_messages.each do |err| %>
+   <p class="badge alert alert-warning"><%= err %></p><br/>
+<% end %>
+</center>
+<% end %>
+</p>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  
+  <header>
+        <%= render('layouts/header') %>
+        <div class="container">
+
+
+                  <% flash.each do |type_m, message| %>
+                  <%= content_tag(:div, message, class: "alert alert-#{type_m}") %>
+                   <% end %>
+
+
+            <center>
+            <br/>
+            <br/>
+            <p class="badge btn-block title" style="font-size: 20px;"><%= yield(:amin) %></p>
+            <%# <%= # link_to image_tag('show.jpg', alt: 'Picture'), '#' %>
+            <br/>
+            </center>
+            <%= yield %>
+            <%= debug(params) if Rails.env.development? %>
+        </div>
+  </header>
+     <%= render('layouts/footer') %> 
+  </body>
+</html>

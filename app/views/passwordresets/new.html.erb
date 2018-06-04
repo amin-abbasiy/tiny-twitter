@@ -1,0 +1,11 @@
+<%= provide(:title, "Paas Reset") %>
+<h1>Password Resets</h1>
+<%= form_for :passwordreset, url: passwordresets_path  do |f|  %> 
+<% #why here is resets and in log in url is reset without s %>
+ <pre>
+   <%= f.label :email %>
+   <%= f.email_field :email, style: 'width: 200px;', class: 'form-control' %>
+   <%= f.submit 'Submit', style: 'width: 150px', class: 'btn btn-info' %>
+</pre>
+<% end %>
+<br/>

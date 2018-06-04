@@ -1,0 +1,9 @@
+<% provide(:title, "Edit Profile") %>
+<% provide(:btn_text, "Edit Aminit Accont") %>
+<%= render('form') %>
+<br/>
+<br/>
+<div class='gravatar'>
+  <%= gravatar_for @user %>
+  <a href="http://gravatar.com/emails" target="_blank" class="btn btn-warning">change</a>
+</div>
