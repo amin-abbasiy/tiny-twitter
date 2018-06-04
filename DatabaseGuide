@@ -1,0 +1,3 @@
+# For working fine, run below cammand in main app folder :
+
+# ~$ rails db:seed
