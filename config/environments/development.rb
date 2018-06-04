@@ -32,17 +32,15 @@ Rails.application.configure do
   
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = "http://0.0.0.0:3000"
+  host = "your host"
   config.action_mailer.default_url_options = {host: host, protocol: "http"}
-  # host = "localhost:3000"
-  # config.action_mailer.default_url_options = host
   ActionMailer::Base.smtp_settings = {
-     :address  => "smtp.mail.yahoo.com",
-     :port     => 465,
+     :address  => "smtp service provider",
+     :port     => "port",
      :authentication   => :plain,
-     :username   => ENV["best_programer_amin@yahoo.com"],
-     :password   =>   ENV["bestking700"],
-     :domain   => "yahoo.com",
+     :username   => ENV["your-user-name"],
+     :password   =>   ENV["your-pass"],
+     :domain   => "domain",
      :enable_startssl_auto  => true
   }
 
