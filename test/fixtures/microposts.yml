@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+orang:
+  content: Orange Text
+  created_at: <%= 2.years.ago %>
+  user: amin
+
+amin:
+  content: User Is Amin
+  created_at: <%= 10.minutes.ago %>
+  user: amin 
+
+ali:
+  content: Ali Is User
+  created_at: <%= Time.zone.now %>
+  user: amin
+
+<% 30.times do |n| %>
+micropost-<%= n %> #this is css class of any micropost is in user show page
+content: <%= Faker::Lorem.sentence(5) %>
+created_at: <%= 42.hours.ago %>
+user: amin
+<% end %>

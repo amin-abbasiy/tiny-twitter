@@ -1,0 +1,21 @@
+
+
+one:
+  follower: amin
+  followed: niki
+
+two:
+  follower: sina
+  followed: amin
+
+three:
+  follower: jewelin
+  followed: amin2
+
+four:
+  follower: milad
+  followed: amin
+
+five:
+  follower: sina
+  followed: amin
